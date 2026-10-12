@@ -1,1107 +1,825 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="JomiBeautyCO — Affordable, luxury and long-lasting perfumes, makeup and beauty essentials in Lagos, Nigeria.">
-    <meta name="theme-color" content="#2E1A26">
+    <meta
+      name="description"
+      content="JomiBeautyCO — Affordable, luxury and long-lasting perfumes, makeup and beauty essentials in Lagos, Nigeria."
+    />
+    <meta name="theme-color" content="#2E1A26" />
 
     <title>JomiBeautyCO | Beauty, Fragrance & More</title>
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-    >
-     <link rel="stylesheet" href="index.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
-
+  <body>
     <!-- ================= HEADER ================= -->
     <header class="header" id="header">
-        <nav class="nav container">
+      <nav class="nav container">
+        <a href="#home" class="logo"> Jomi<span>Beauty</span>CO </a>
 
-            <a href="#home" class="logo">
-                Jomi<span>Beauty</span>CO
-            </a>
+        <div class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#shop" class="nav-link">Shop</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#contact" class="nav-link">Contact</a>
 
-            <div class="nav-menu" id="navMenu">
+          <a
+            href="https://instagram.com/jomibeautyco"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="nav-instagram"
+          >
+            Instagram
+          </a>
 
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#shop" class="nav-link">Shop</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#reviews" class="nav-link">Reviews</a>
-                <a href="#contact" class="nav-link">Contact</a>
-
-                <a
-                    href="https://instagram.com/jomibeautyco"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="nav-instagram"
-                >
-                    Instagram
-                </a>
-
-                <div class="cart-wrapper">
-        <button class="cart-btn" id="cartBtn">
-            🛒 <span id="cartCount">0</span>
-        </button>
-    </div>
-
-
-            </div>
-
-            <button
-                class="menu-toggle"
-                id="menuToggle"
-                aria-label="Open navigation menu"
-                aria-expanded="false"
-            >
-                <span></span>
-                <span></span>
-                <span></span>
+          <div class="cart-wrapper">
+            <button class="cart-btn" id="cartBtn">
+              🛒 <span id="cartCount">0</span>
             </button>
+          </div>
+        </div>
 
-        </nav>
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
     </header>
 
-
     <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="home">
+        <div class="hero-decoration hero-circle-one"></div>
+        <div class="hero-decoration hero-circle-two"></div>
 
-        <!-- ================= HERO ================= -->
-        <section class="hero" id="home">
+        <div class="container hero-content">
+          <div class="hero-text reveal">
+            <span class="eyebrow">Beauty • Fragrance • You</span>
 
-            <div class="hero-decoration hero-circle-one"></div>
-            <div class="hero-decoration hero-circle-two"></div>
+            <h1>
+              Smell good.
+              <em>Look good.</em>
+              Feel good.
+            </h1>
 
-            <div class="container hero-content">
+            <p>
+              Discover affordable, luxurious and long-lasting perfumes and
+              beauty essentials carefully selected to make every day feel a
+              little more special.
+            </p>
 
-                <div class="hero-text reveal">
+            <div class="hero-buttons">
+              <a href="#shop" class="btn btn-gold">
+                Shop Now
+                <span>→</span>
+              </a>
 
-                    <span class="eyebrow">Beauty • Fragrance • You</span>
-
-                    <h1>
-                        Smell good.
-                        <em>Look good.</em>
-                        Feel good.
-                    </h1>
-
-                    <p>
-                        Discover affordable, luxurious and long-lasting perfumes
-                        and beauty essentials carefully selected to make every
-                        day feel a little more special.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#shop" class="btn btn-gold">
-                            Shop Now
-                            <span>→</span>
-                        </a>
-
-                        <a href="#about" class="btn btn-outline">
-                            Our Story
-                        </a>
-
-                    </div>
-
-                    <div class="hero-info">
-
-                        <div>
-                            <strong>₦5,000+</strong>
-                            <span>Affordable picks</span>
-                        </div>
-
-                        <div class="hero-divider"></div>
-
-                        <div>
-                            <strong>Nationwide</strong>
-                            <span>Delivery available</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="hero-image reveal">
-
-                    <div class="hero-image-frame">
-
-                        <img
-                            src="WhatsApp Image 2026-08-12 at 1.30.35 PM.jpeg"
-                            alt="JomiBeautyCO beauty products"
-                        >
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- ================= TRUST BAR ================= -->
-        <section class="trust-bar">
-
-            <div class="container trust-grid">
-
-                <div class="trust-item">
-                    <span class="trust-icon">✦</span>
-                    <div>
-                        <strong>Quality Products</strong>
-                        <span>Carefully selected</span>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">♡</span>
-                    <div>
-                        <strong>Affordable Luxury</strong>
-                        <span>Beauty without breaking the bank</span>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">⌁</span>
-                    <div>
-                        <strong>Long-Lasting Scents</strong>
-                        <span>Smell good all day</span>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <span class="trust-icon">↗</span>
-                    <div>
-                        <strong>Nationwide Delivery</strong>
-                        <span>We deliver across Nigeria</span>
-                    </div>
-                </div>
-
+              <a href="#about" class="btn btn-outline"> Our Story </a>
             </div>
 
-        </section>
-
-
-        <!-- ================= SHOP ================= -->
-        <section class="section shop-section" id="shop">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="eyebrow">Shop JomiBeautyCO</span>
-
-                    <h2>
-                        Find something you'll
-                        <em>love.</em>
-                    </h2>
-
-                    <p>
-                        From everyday fragrances to beauty essentials,
-                        there's something for every mood, style and budget.
-                    </p>
-
-                </div>
-
-
-                <!-- Category filters -->
-                <div class="shop-filters reveal">
-
-                    <button class="filter-btn active" data-filter="all">
-                        All
-                    </button>
-
-                    <button class="filter-btn" data-filter="perfume">
-                        Perfume
-                    </button>
-
-                    <button class="filter-btn" data-filter="makeup">
-                        Makeup
-                    </button>
-
-                    <button class="filter-btn" data-filter="skincare">
-                        Skincare
-                    </button>
-
-                </div>
-
-
-                <!-- Product Grid -->
-                <div class="product-grid">
-
-                    <!-- Product 1 -->
-                    <article class="product-card reveal" data-category="makeup">
-
-                        <div class="product-image">
-
-                            <img
-                                src="WhatsApp Image 2026-08-12 at 12.51.15 PM.jpeg"
-                                alt="JomiBeautyCO makeup product"
-                            >
-
-                            <span class="product-tag">
-                                Bestseller
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Makeup
-                            </span>
-
-                            <h3>Everyday Glam Essential</h3>
-
-                            <p>
-                                A beautiful addition to your everyday
-                                makeup routine.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦18,500</strong>
-
-                                <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Everyday Glam Essential"
-                                     data-price="18500"
-                                    >
-                                        Add to Cart
-                                  </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Product 2 -->
-                    <article class="product-card reveal" data-category="perfume">
-
-                        <div class="product-image">
-
-                            <img
-                                src="amberoudbg.jfif"
-                                alt="Amber and Oud perfume"
-                            >
-
-                            <span class="product-tag">
-                                Popular
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Perfume
-                            </span>
-
-                            <h3>Amber & Oud</h3>
-
-                            <p>
-                                Warm, rich and elegant. A scent that
-                                leaves a beautiful impression.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦42,000</strong>
-
-                                <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Amber & Oud"
-                                     data-price="42000"
-                                    >
-                                        Add to Cart
-                                  </button>
-                            </div>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- Product 3 -->
-                    <article class="product-card reveal" data-category="skincare">
-
-                        <div class="product-image">
-
-                            <img
-                                src="WhatsApp Image 2026-08-12 at 12.11.00 PM (1).jpeg"
-                                alt="JomiBeautyCO skincare product"
-                            >
-
-                            <span class="product-tag">
-                                New
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Skincare
-                            </span>
-
-                            <h3>Radiance Essential</h3>
-
-                            <p>
-                                Add a simple glow-focused step to your
-                                everyday skincare routine.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦25,000</strong>
-
-                                <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Radiance Essential"
-                                     data-price="25000"
-                                    >
-                                        Add to Cart
-                                  </button>
-
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <!-- Product 4 -->
-                    <article class="product-card reveal" data-category="perfume">
-
-                        <div class="product-image">
-
-                            <img
-                                src="rave-now men.webp"
-                                alt="Rave Now perfume"
-                            >
-
-                            <span class="product-tag">
-                                Popular
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Perfume
-                            </span>
-
-                            <h3>Rave Now</h3>
-
-                            <p>
-                                A strong and masculine scent, perfect for those who want to stand out.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦30,000</strong>
-                                 <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Rave Now"
-                                     data-price="30000"
-                                    >
-                                        Add to Cart
-                                  </button>
-                               
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <!-- Product 5 -->
-                    <article class="product-card reveal" data-category="perfume">
-
-                        <div class="product-image">
-
-                            <img
-                                src="nebras-elixir.webp"
-                                alt="Nebras Elixir perfume"
-                            >
-
-                            <span class="product-tag">
-                                Popular
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Perfume
-                            </span>
-
-                            <h3>Nebras Elixir</h3>
-
-                            <p>
-                                A warm vanilla-based fragrance with notes of berries, cocoa, and amber, creating a sweet, elegant, and unforgettable scent.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦45000</strong>
-                                <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Nebras Elixir"
-                                     data-price="45000"
-                                    >
-                                        Add to Cart
-                                  </button>
-                               
-                            </div>
-
-                        </div>
-
-                    </article>
-
-                    <!-- Product 6 -->
-                    <article class="product-card reveal" data-category="perfume">
-
-                        <div class="product-image">
-
-                            <img
-                                src="vanilla-voyage.webp"
-                                alt="Vanilla Voyage perfume"
-                            >
-
-                            <span class="product-tag">
-                                Popular
-                            </span>
-
-                        </div>
-
-                        <div class="product-details">
-
-                            <span class="product-category">
-                                Perfume
-                            </span>
-
-                            <h3>Vanilla Voyage</h3>
-
-                            <p> A sweet gourmand fragrance with creamy vanilla, caramel, and soft musk,crreatimg a warm and irresistable scent trail.
-                            </p>
-
-                            <div class="product-bottom">
-
-                                <strong>₦50,000</strong>
-
-                                <button
-                                     class="product-btn add-to-cart"
-                                     data-name="Vanilla Voyage"
-                                     data-price="50000"
-                                    >
-                                        Add to Cart
-                                  </button>
-            
-                            </div>
-
-                        </div>
-
-                    </article>
-                    
-        
-                </div>
-
-
-                <div class="shop-note reveal">
-                    <span>Can't find what you're looking for?</span>
-
-                    <a
-                        href="https://instagram.com/jomibeautyco"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Check our Instagram for more products →
-                    </a>
-                </div>
-
+            <div class="hero-info">
+              <div>
+                <strong>₦5,000+</strong>
+                <span>Affordable picks</span>
+              </div>
+
+              <div class="hero-divider"></div>
+
+              <div>
+                <strong>Nationwide</strong>
+                <span>Delivery available</span>
+              </div>
             </div>
+          </div>
 
-        </section>
-
-
-        <!-- ================= PERFUME FEATURE ================= -->
-        <section class="fragrance-section" id="fragrance">
-
-            <div class="container fragrance-grid">
-
-                <div class="fragrance-image reveal">
-
-                    <img
-                        src="amberoudbg.jfif"
-                        alt="Amber and Oud fragrance"
-                    >
-
-                </div>
-
-
-                <div class="fragrance-content reveal">
-
-                    <span class="eyebrow">Fragrance of the moment</span>
-
-                    <h2>
-                        Your scent is part of
-                        <em>your story.</em>
-                    </h2>
-
-                    <p>
-                        The right fragrance can change your whole mood.
-                        Whether you love something sweet, fresh, floral,
-                        woody or bold, JomiBeautyCO has a scent waiting
-                        for you.
-                    </p>
-
-                    <div class="scent-notes">
-
-                        <div>
-                            <span>01</span>
-                            <strong>Fresh</strong>
-                            <small>Clean & refreshing</small>
-                        </div>
-
-                        <div>
-                            <span>02</span>
-                            <strong>Floral</strong>
-                            <small>Soft & feminine</small>
-                        </div>
-
-                        <div>
-                            <span>03</span>
-                            <strong>Woody</strong>
-                            <small>Warm & sophisticated</small>
-                        </div>
-
-                    </div>
-
-                    <a
-                        href="https://wa.me/23408025264779?text=Hello%20JomiBeautyCO,%20please%20help%20me%20choose%20a%20perfume."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-dark"
-                    >
-                        Help me choose a scent →
-                    </a>
-
-                </div>
-
+          <div class="hero-image reveal">
+            <div class="hero-image-frame">
+              <img
+                src="WhatsApp Image 2026-08-12 at 1.30.35 PM.jpeg"
+                alt="JomiBeautyCO beauty products"
+              />
             </div>
+          </div>
+        </div>
+      </section>
 
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-        <section class="section about-section" id="about">
-
-            <div class="container about-grid">
-
-                <div class="about-content reveal">
-
-                    <span class="eyebrow">Our Story</span>
-
-                    <h2>
-                        Beauty should feel
-                        <em>personal.</em>
-                    </h2>
-
-                    <p>
-                        JomiBeautyCO is a beauty brand built around one
-                        simple idea — looking and smelling good shouldn't
-                        have to cost a fortune.
-                    </p>
-
-                    <p>
-                        We carefully select perfumes and beauty products
-                        that combine affordability, quality and that
-                        little touch of luxury every girl deserves.
-                    </p>
-
-                    <p>
-                        Whether you're shopping for yourself, looking for
-                        a gift or simply trying to find your new signature
-                        scent, we're here to make the experience easy.
-                    </p>
-
-                    <a
-                        href="https://instagram.com/jomibeautyco"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="text-link"
-                    >
-                        Follow our journey on Instagram →
-                    </a>
-
-                </div>
-
-
-                <div class="about-visual reveal">
-
-                    <div class="about-image-main">
-
-                        <img
-                            src="WhatsApp Image 2026-08-12 at 1.30.35 PM.jpeg"
-                            alt="JomiBeautyCO beauty collection"
-                        >
-
-                    </div>
-
-                </div>
-
+      <!-- ================= TRUST BAR ================= -->
+      <section class="trust-bar">
+        <div class="container trust-grid">
+          <div class="trust-item">
+            <span class="trust-icon">✦</span>
+            <div>
+              <strong>Quality Products</strong>
+              <span>Carefully selected</span>
             </div>
+          </div>
 
-        </section>
-
-
-        <!-- ================= WHY JOMI ================= -->
-        <section class="section why-section">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="eyebrow">Why JomiBeautyCO?</span>
-
-                    <h2>
-                        Because you deserve
-                        <em>good things.</em>
-                    </h2>
-
-                </div>
-
-
-                <div class="why-grid">
-
-                    <div class="why-card reveal">
-
-                        <span class="why-number">01</span>
-
-                        <h3>Affordable</h3>
-
-                        <p>
-                            Beautiful products at prices that make
-                            treating yourself easier.
-                        </p>
-
-                    </div>
-
-
-                    <div class="why-card reveal">
-
-                        <span class="why-number">02</span>
-
-                        <h3>Quality First</h3>
-
-                        <p>
-                            We care about what we sell and the experience
-                            you have after purchasing.
-                        </p>
-
-                    </div>
-
-
-                    <div class="why-card reveal">
-
-                        <span class="why-number">03</span>
-
-                        <h3>Personal Service</h3>
-
-                        <p>
-                            Not sure what to buy? Send us a message and
-                            we'll help you find something suitable.
-                        </p>
-
-                    </div>
-
-
-                    <div class="why-card reveal">
-
-                        <span class="why-number">04</span>
-
-                        <h3>Nationwide Delivery</h3>
-
-                        <p>
-                            Wherever you are in Nigeria, we can get
-                            your order to you.
-                        </p>
-
-                    </div>
-
-                </div>
-
+          <div class="trust-item">
+            <span class="trust-icon">♡</span>
+            <div>
+              <strong>Affordable Luxury</strong>
+              <span>Beauty without breaking the bank</span>
             </div>
+          </div>
 
-        </section>
-
-
-        <!-- ================= REVIEWS ================= -->
-        <section class="section reviews-section" id="reviews">
-
-            <div class="container">
-
-                <div class="section-heading reveal">
-
-                    <span class="eyebrow">Customer Love</span>
-
-                    <h2>
-                        Don't just take
-                        <em>our word for it.</em>
-                    </h2>
-
-                </div>
-
-
-                <div class="reviews-grid">
-
-                    <article class="review-card reveal">
-
-                        <div class="stars">
-                            ★ ★ ★ ★ ★
-                        </div>
-
-                        <blockquote>
-                            "The scent is actually so nice and long lasting.
-                            I keep getting asked what perfume I'm wearing!"
-                        </blockquote>
-
-                        <span class="review-name">
-                            — JomiBeautyCO Customer
-                        </span>
-
-                    </article>
-
-
-                    <article class="review-card reveal">
-
-                        <div class="stars">
-                            ★ ★ ★ ★ ★
-                        </div>
-
-                        <blockquote>
-                            "I love how affordable everything is. The
-                            packaging, the scent and the whole experience
-                            was so good."
-                        </blockquote>
-
-                        <span class="review-name">
-                            — Happy Customer
-                        </span>
-
-                    </article>
-
-
-                    <article class="review-card reveal">
-
-                        <div class="stars">
-                            ★ ★ ★ ★ ★
-                        </div>
-
-                        <blockquote>
-                            "Soft girl vibes all the way! Definitely making
-                            JomiBeautyCO my perfume plug."
-                        </blockquote>
-
-                        <span class="review-name">
-                            — Satisfied Customer
-                        </span>
-
-                    </article>
-
-                </div>
-
+          <div class="trust-item">
+            <span class="trust-icon">⌁</span>
+            <div>
+              <strong>Long-Lasting Scents</strong>
+              <span>Smell good all day</span>
             </div>
+          </div>
 
-        </section>
+          <div class="trust-item">
+            <span class="trust-icon">↗</span>
+            <div>
+              <strong>Nationwide Delivery</strong>
+              <span>We deliver across Nigeria</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- ================= SHOP ================= -->
+      <section class="section shop-section" id="shop">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Shop JomiBeautyCO</span>
 
-        <!-- ================= CTA ================= -->
-        <section class="cta-section">
+            <h2>
+              Find something you'll
+              <em>love.</em>
+            </h2>
 
-            <div class="cta-decoration"></div>
+            <p>
+              From everyday fragrances to beauty essentials, there's something
+              for every mood, style and budget.
+            </p>
+          </div>
 
-            <div class="container cta-content reveal">
+          <!-- Category filters -->
+          <div class="shop-filters reveal">
+            <button class="filter-btn active" data-filter="all">All</button>
 
-                <span class="eyebrow">Ready to find your next favourite?</span>
+            <button class="filter-btn" data-filter="perfume">Perfume</button>
 
-                <h2>
-                    Your next beauty
-                    <em>obsession</em> is waiting.
-                </h2>
+            <button class="filter-btn" data-filter="makeup">Makeup</button>
+
+            <button class="filter-btn" data-filter="skincare">Skincare</button>
+          </div>
+
+          <!-- Product Grid -->
+          <div class="product-grid">
+            <!-- Product 1 -->
+            <article class="product-card reveal" data-category="makeup">
+              <div class="product-image">
+                <img
+                  src="WhatsApp Image 2026-08-12 at 12.51.15 PM.jpeg"
+                  alt="JomiBeautyCO makeup product"
+                />
+
+                <span class="product-tag"> Bestseller </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Makeup </span>
+
+                <h3>Everyday Glam Essential</h3>
+
+                <p>A beautiful addition to your everyday makeup routine.</p>
+
+                <div class="product-bottom">
+                  <strong>₦18,500</strong>
+
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Everyday Glam Essential"
+                    data-price="18500"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card reveal" data-category="perfume">
+              <div class="product-image">
+                <img src="amberoudbg.jfif" alt="Amber and Oud perfume" />
+
+                <span class="product-tag"> Popular </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Perfume </span>
+
+                <h3>Amber & Oud</h3>
 
                 <p>
-                    Browse our products or send us a message.
-                    We'd love to help you find something you'll love.
+                  Warm, rich and elegant. A scent that leaves a beautiful
+                  impression.
                 </p>
 
-                <div class="cta-buttons">
+                <div class="product-bottom">
+                  <strong>₦42,000</strong>
 
-                    <a href="#shop" class="btn btn-gold">
-                        Shop Now →
-                    </a>
-
-                    <a
-                        href="https://wa.me/2348025264779?text=Hello%20JomiBeautyCO,%20I'd%20like%20to%20place%20an%20order."
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="btn btn-outline"
-                    >
-                        WhatsApp Us
-                    </a>
-
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Amber & Oud"
+                    data-price="42000"
+                  >
+                    Add to Cart
+                  </button>
                 </div>
+              </div>
+            </article>
 
+            <!-- Product 3 -->
+            <article class="product-card reveal" data-category="skincare">
+              <div class="product-image product-image-skincare">
+                <img
+                  src="WhatsApp Image 2026-08-12 at 12.11.00 PM (1).jpeg"
+                  alt="JomiBeautyCO skincare product"
+                />
+
+                <span class="product-tag"> New </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Skincare </span>
+
+                <h3>Radiance Essential</h3>
+
+                <p>
+                  Add a simple glow-focused step to your everyday skincare
+                  routine.
+                </p>
+
+                <div class="product-bottom">
+                  <strong>₦25,000</strong>
+
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Radiance Essential"
+                    data-price="25000"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card reveal" data-category="perfume">
+              <div class="product-image">
+                <img src="rave-now men.webp" alt="Rave Now perfume" />
+
+                <span class="product-tag"> Popular </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Perfume </span>
+
+                <h3>Rave Now</h3>
+
+                <p>
+                  A strong and masculine scent, perfect for those who want to
+                  stand out.
+                </p>
+
+                <div class="product-bottom">
+                  <strong>₦30,000</strong>
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Rave Now"
+                    data-price="30000"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 5 -->
+            <article class="product-card reveal" data-category="perfume">
+              <div class="product-image">
+                <img src="nebras-elixir.webp" alt="Nebras Elixir perfume" />
+
+                <span class="product-tag"> Popular </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Perfume </span>
+
+                <h3>Nebras Elixir</h3>
+
+                <p>
+                  A warm vanilla-based fragrance with notes of berries, cocoa,
+                  and amber, creating a sweet, elegant, and unforgettable scent.
+                </p>
+
+                <div class="product-bottom">
+                  <strong>₦45000</strong>
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Nebras Elixir"
+                    data-price="45000"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Product 6 -->
+            <article class="product-card reveal" data-category="perfume">
+              <div class="product-image">
+                <img src="vanilla-voyage.webp" alt="Vanilla Voyage perfume" />
+
+                <span class="product-tag"> Popular </span>
+              </div>
+
+              <div class="product-details">
+                <span class="product-category"> Perfume </span>
+
+                <h3>Vanilla Voyage</h3>
+
+                <p>
+                  A sweet gourmand fragrance with creamy vanilla, caramel, and
+                  soft musk,crreatimg a warm and irresistable scent trail.
+                </p>
+
+                <div class="product-bottom">
+                  <strong>₦50,000</strong>
+
+                  <button
+                    class="product-btn add-to-cart"
+                    data-name="Vanilla Voyage"
+                    data-price="50000"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="shop-note reveal">
+            <span>Can't find what you're looking for?</span>
+
+            <a
+              href="https://instagram.com/jomibeautyco"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Check our Instagram for more products →
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PERFUME FEATURE ================= -->
+      <section class="fragrance-section" id="fragrance">
+        <div class="container fragrance-grid">
+          <div class="fragrance-image reveal">
+            <img src="amberoudbg.jfif" alt="Amber and Oud fragrance" />
+          </div>
+
+          <div class="fragrance-content reveal">
+            <span class="eyebrow">Fragrance of the moment</span>
+
+            <h2>
+              Your scent is part of
+              <em>your story.</em>
+            </h2>
+
+            <p>
+              The right fragrance can change your whole mood. Whether you love
+              something sweet, fresh, floral, woody or bold, JomiBeautyCO has a
+              scent waiting for you.
+            </p>
+
+            <div class="scent-notes">
+              <div>
+                <span>01</span>
+                <strong>Fresh</strong>
+                <small>Clean & refreshing</small>
+              </div>
+
+              <div>
+                <span>02</span>
+                <strong>Floral</strong>
+                <small>Soft & feminine</small>
+              </div>
+
+              <div>
+                <span>03</span>
+                <strong>Woody</strong>
+                <small>Warm & sophisticated</small>
+              </div>
             </div>
 
-        </section>
+            <a
+              href="https://wa.me/23408025264779?text=Hello%20JomiBeautyCO,%20please%20help%20me%20choose%20a%20perfume."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-dark"
+            >
+              Help me choose a scent →
+            </a>
+          </div>
+        </div>
+      </section>
 
+      <!-- ================= ABOUT ================= -->
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-content reveal">
+            <span class="eyebrow">Our Story</span>
 
-        <!-- ================= CONTACT ================= -->
-        <section class="section contact-section" id="contact">
+            <h2>
+              Beauty should feel
+              <em>personal.</em>
+            </h2>
 
-            <div class="container contact-grid">
+            <p>
+              JomiBeautyCO is a beauty brand built around one simple idea —
+              looking and smelling good shouldn't have to cost a fortune.
+            </p>
 
-                <div class="contact-content reveal">
+            <p>
+              We carefully select perfumes and beauty products that combine
+              affordability, quality and that little touch of luxury every girl
+              deserves.
+            </p>
 
-                    <span class="eyebrow">Let's Connect</span>
+            <p>
+              Whether you're shopping for yourself, looking for a gift or simply
+              trying to find your new signature scent, we're here to make the
+              experience easy.
+            </p>
 
-                    <h2>
-                        Have a question?
-                        <em>Talk to us.</em>
-                    </h2>
+            <a
+              href="https://instagram.com/jomibeautyco"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-link"
+            >
+              Follow our journey on Instagram →
+            </a>
+          </div>
 
-                    <p>
-                        Want to place an order, ask about a perfume,
-                        or simply need help choosing what suits you?
-                        We're just a message away.
-                    </p>
+          <div class="about-visual reveal">
+            <div class="about-image-main">
+              <img
+                src="WhatsApp Image 2026-08-12 at 1.30.35 PM.jpeg"
+                alt="JomiBeautyCO beauty collection"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <div class="contact-links">
+      <!-- ================= WHY JOMI ================= -->
+      <section class="section why-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Why JomiBeautyCO?</span>
 
-                        <a
-                            href="https://instagram.com/jomibeautyco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span>Instagram</span>
-                            <strong>@jomibeautyco →</strong>
-                        </a>
+            <h2>
+              Because you deserve
+              <em>good things.</em>
+            </h2>
+          </div>
 
-                        <a
-                            href="https://wa.me/23408025264779"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <span>WhatsApp</span>
-                            <strong>Chat with us →</strong>
-                        </a>
+          <div class="why-grid">
+            <div class="why-card reveal">
+              <span class="why-number">01</span>
 
-                        <a href="mailto:hello@jomibeautyco.com">
-                            <span>Email</span>
-                            <strong>hello@jomibeautyco.com →</strong>
-                        </a>
+              <h3>Affordable</h3>
 
-                    </div>
-
-                </div>
-
-
-                <div class="contact-box reveal">
-
-                    <span class="eyebrow">Stay in the loop</span>
-
-                    <h3>
-                        Get first dibs on new drops.
-                    </h3>
-
-                    <p>
-                        Join our list for restocks, new products,
-                        special offers and beauty updates.
-                    </p>
-
-                    <form id="newsletterForm" class="newsletter-form">
-
-                        <label for="email" class="sr-only">
-                            Email address
-                        </label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Your email address"
-                            required
-                        >
-
-                        <button type="submit">
-                            Subscribe
-                        </button>
-
-                    </form>
-
-                    <p
-                        class="form-message"
-                        id="formMessage"
-                        aria-live="polite"
-                    ></p>
-
-                    <small>
-                        No spam. Just beautiful things occasionally.
-                    </small>
-
-                </div>
-
+              <p>
+                Beautiful products at prices that make treating yourself easier.
+              </p>
             </div>
 
-        </section>
+            <div class="why-card reveal">
+              <span class="why-number">02</span>
 
+              <h3>Quality First</h3>
+
+              <p>
+                We care about what we sell and the experience you have after
+                purchasing.
+              </p>
+            </div>
+
+            <div class="why-card reveal">
+              <span class="why-number">03</span>
+
+              <h3>Personal Service</h3>
+
+              <p>
+                Not sure what to buy? Send us a message and we'll help you find
+                something suitable.
+              </p>
+            </div>
+
+            <div class="why-card reveal">
+              <span class="why-number">04</span>
+
+              <h3>Nationwide Delivery</h3>
+
+              <p>Wherever you are in Nigeria, we can get your order to you.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= REVIEWS ================= -->
+      <section class="section reviews-section" id="reviews">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">Customer Love</span>
+
+            <h2>
+              Don't just take
+              <em>our word for it.</em>
+            </h2>
+          </div>
+
+          <div class="reviews-grid">
+            <article class="review-card reveal">
+              <div class="stars">★ ★ ★ ★ ★</div>
+
+              <blockquote>
+                "The scent is actually so nice and long lasting. I keep getting
+                asked what perfume I'm wearing!"
+              </blockquote>
+
+              <span class="review-name"> — Fareedah </span>
+            </article>
+
+            <article class="review-card reveal">
+              <div class="stars">★ ★ ★ ★ ★</div>
+
+              <blockquote>
+                "I love how affordable everything is. The packaging, the scent
+                and the whole experience was so good."
+              </blockquote>
+
+              <span class="review-name"> — Oluwadurotimi </span>
+            </article>
+
+            <article class="review-card reveal">
+              <div class="stars">★ ★ ★ ★ ★</div>
+
+              <blockquote>
+                "Soft girl vibes all the way! Definitely making JomiBeautyCO my
+                perfume plug."
+              </blockquote>
+
+              <span class="review-name"> — Jasmine </span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CTA ================= -->
+      <section class="cta-section">
+        <div class="cta-decoration"></div>
+
+        <div class="container cta-content reveal">
+          <span class="eyebrow">Ready to find your next favourite?</span>
+
+          <h2>
+            Your next beauty
+            <em>obsession</em> is waiting.
+          </h2>
+
+          <p>
+            Browse our products or send us a message. We'd love to help you find
+            something you'll love.
+          </p>
+
+          <div class="cta-buttons">
+            <a href="#shop" class="btn btn-gold"> Shop Now → </a>
+
+            <a
+              href="https://wa.me/2348025264779?text=Hello%20JomiBeautyCO,%20I'd%20like%20to%20place%20an%20order."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+            >
+              WhatsApp Us
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTACT ================= -->
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-content reveal">
+            <span class="eyebrow">Let's Connect</span>
+
+            <h2>
+              Have a question?
+              <em>Talk to us.</em>
+            </h2>
+
+            <p>
+              Want to place an order, ask about a perfume, or simply need help
+              choosing what suits you? We're just a message away.
+            </p>
+
+            <div class="contact-links">
+              <a
+                href="https://instagram.com/jomibeautyco"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Instagram</span>
+                <strong>@jomibeautyco →</strong>
+              </a>
+
+              <a
+                href="https://wa.me/23408025264779"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>WhatsApp</span>
+                <strong>Chat with us →</strong>
+              </a>
+
+              <a href="mailto:hello@jomibeautyco.com">
+                <span>Email</span>
+                <strong>hello@jomibeautyco.com →</strong>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-box reveal">
+            <span class="eyebrow">Stay in the loop</span>
+
+            <h3>Get first dibs on new drops.</h3>
+
+            <p>
+              Join our list for restocks, new products, special offers and
+              beauty updates.
+            </p>
+
+            <form id="newsletterForm" class="newsletter-form">
+              <label for="email" class="sr-only"> Email address </label>
+
+              <input
+                type="email"
+                id="email"
+                placeholder="Your email address"
+                required
+              />
+
+              <button type="submit">Subscribe</button>
+            </form>
+
+            <p class="form-message" id="formMessage" aria-live="polite"></p>
+
+            <small> No spam. Just beautiful things occasionally. </small>
+          </div>
+        </div>
+      </section>
     </main>
-
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo"> Jomi<span>Beauty</span>CO </a>
 
-        <div class="container">
+            <p>
+              Affordable luxury, beautiful fragrances and beauty essentials for
+              every kind of woman.
+            </p>
 
-            <div class="footer-grid">
+            <div class="social-links">
+              <a
+                href="https://instagram.com/jomibeautyco"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <!-- IG -->
+                <i class="fa-brands fa-instagram icon ig"></i>
+              </a>
 
-                <div class="footer-brand">
+              <a
+                href="https://www.tiktok.com/@jomibeautyco"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+              >
+                <!-- TT -->
+                <i class="fa-brands fa-tiktok tt"></i>
+              </a>
 
-                    <a href="#home" class="footer-logo">
-                        Jomi<span>Beauty</span>CO
-                    </a>
-
-                    <p>
-                        Affordable luxury, beautiful fragrances and
-                        beauty essentials for every kind of woman.
-                    </p>
-
-                    <div class="social-links">
-
-                        <a
-                            href="https://instagram.com/jomibeautyco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Instagram"
-                        >
-                            IG
-                        </a>
-
-                        <a
-                            href="https://www.tiktok.com/@jomibeautyco"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="TikTok"
-                        >
-                            TT
-                        </a>
-
-                        <a
-                            href="https://wa.me/23408025264779"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="WhatsApp"
-                        >
-                            WA
-                        </a>
-
-                    </div>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h4>Shop</h4>
-
-                    <a href="#shop">All Products</a>
-                    <a href="#shop">Perfume</a>
-                    <a href="#shop">Makeup</a>
-                    <a href="#shop">Skincare</a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h4>Company</h4>
-
-                    <a href="#about">About Us</a>
-                    <a href="#reviews">Reviews</a>
-                    <a href="#contact">Contact</a>
-
-                </div>
-
-
-                <div class="footer-column">
-
-                    <h4>Need Help?</h4>
-
-                    <a
-                        href="https://wa.me/23408025264779"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        WhatsApp Us
-                    </a>
-
-                    <a href="mailto:hello@jomibeautyco.com">
-                        Email Us
-                    </a>
-
-                    <a
-                        href="https://instagram.com/jomibeautyco"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        DM on Instagram
-                    </a>
-
-                </div>
-
+              <a
+                href="https://wa.me/23408025264779"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                <!-- WA -->
+                <i class="fa-brands fa-whatsapp icon"></i>
+         
+            </a>
             </div>
+          </div>
 
+          <div class="footer-column">
+            <h4>Shop</h4>
 
-            <div class="footer-bottom">
+            <a href="#shop">All Products</a>
+            <a href="#shop">Perfume</a>
+            <a href="#shop">Makeup</a>
+            <a href="#shop">Skincare</a>
+          </div>
 
-                <span>
-                    © 2026 JomiBeautyCO. All rights reserved.
-                </span>
+          <div class="footer-column">
+            <h4>Company</h4>
 
-                <span>
-                    Made with love in Lagos, Nigeria.
-                </span>
+            <a href="#about">About Us</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+          </div>
 
-            </div>
+          <div class="footer-column">
+            <h4>Need Help?</h4>
 
+            <a
+              href="https://wa.me/23408025264779"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp Us
+            </a>
+
+            <a href="mailto:hello@jomibeautyco.com"> Email Us </a>
+
+            <a
+              href="https://instagram.com/jomibeautyco"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              DM on Instagram
+            </a>
+          </div>
         </div>
 
-    </footer>
+        <div class="footer-bottom">
+          <span> © 2026 JomiBeautyCO. All rights reserved. </span>
 
+          <span> Made with love in Lagos, Nigeria. </span>
+        </div>
+      </div>
+    </footer>
 
     <!-- WhatsApp floating button -->
     <a
-        href="https://wa.me/2348025264779?text=Hello%20JomiBeautyCO,%20I'd%20like%20to%20make%20an%20enquiry."
-        target="_blank"
-        rel="noopener noreferrer"
-        class="whatsapp-float"
-        aria-label="Chat with JomiBeautyCO on WhatsApp"
+      href="https://wa.me/2348025264779?text=Hello%20JomiBeautyCO,%20I'd%20like%20to%20make%20an%20enquiry."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="whatsapp-float"
+      aria-label="Chat with JomiBeautyCO on WhatsApp"
     >
-        <span>WA</span>
+      <!-- <span>WA</span> -->
+      <i class="fa-brands fa-whatsapp icon floating-icon"></i>
     </a>
-
 
     <!-- JavaScript -->
     <script src="index.js"></script>
-
-</body>
+  </body>
 </html>
-

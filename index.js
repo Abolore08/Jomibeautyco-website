@@ -3,7 +3,6 @@
    Main JavaScript
 ========================================================= */
 
-
 /* ================= MOBILE MENU ================= */
 
 const menuToggle = document.getElementById("menuToggle");
@@ -11,441 +10,285 @@ const navMenu = document.getElementById("navMenu");
 const navLinks = document.querySelectorAll(".nav-link");
 
 if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.classList.toggle("active");
 
-        const isOpen = navMenu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
 
-        menuToggle.classList.toggle("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen ? "true" : "false"
-        );
-
-        document.body.classList.toggle(
-            "menu-open",
-            isOpen
-        );
-
-    });
-
+    document.body.classList.toggle("menu-open", isOpen);
+  });
 }
-
 
 /* Close menu when navigation link is clicked */
 
 navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    if (!navMenu || !menuToggle) return;
 
-    link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
 
-        if (!navMenu || !menuToggle) return;
+    menuToggle.classList.remove("active");
 
-        navMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
 
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
-    });
-
+    document.body.classList.remove("menu-open");
+  });
 });
-
 
 /* Close menu when clicking outside */
 
 document.addEventListener("click", (event) => {
+  if (!navMenu || !menuToggle) return;
 
-    if (!navMenu || !menuToggle) return;
+  const clickedInsideMenu = navMenu.contains(event.target);
 
-    const clickedInsideMenu =
-        navMenu.contains(event.target);
+  const clickedMenuButton = menuToggle.contains(event.target);
 
-    const clickedMenuButton =
-        menuToggle.contains(event.target);
+  if (
+    !clickedInsideMenu &&
+    !clickedMenuButton &&
+    navMenu.classList.contains("open")
+  ) {
+    navMenu.classList.remove("open");
 
-    if (
-        !clickedInsideMenu &&
-        !clickedMenuButton &&
-        navMenu.classList.contains("open")
-    ) {
+    menuToggle.classList.remove("active");
 
-        navMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
 
-        menuToggle.classList.remove("active");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            "false"
-        );
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
-    }
-
+    document.body.classList.remove("menu-open");
+  }
 });
-
 
 /* ================= HEADER SCROLL ================= */
 
 const header = document.getElementById("header");
 
 window.addEventListener("scroll", () => {
+  if (!header) return;
 
-    if (!header) return;
-
-    if (window.scrollY > 30) {
-
-        header.classList.add("scrolled");
-
-    } else {
-
-        header.classList.remove("scrolled");
-
-    }
-
+  if (window.scrollY > 30) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
 });
-
 
 /* ================= PRODUCT FILTER ================= */
 
-const filterButtons =
-    document.querySelectorAll(".filter-btn");
+const filterButtons = document.querySelectorAll(".filter-btn");
 
-const productCards =
-    document.querySelectorAll(".product-card");
+const productCards = document.querySelectorAll(".product-card");
 
 filterButtons.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-        filterButtons.forEach((btn) => {
-            btn.classList.remove("active");
-        });
-
-        button.classList.add("active");
-
-        const selectedCategory =
-            button.dataset.filter;
-
-        productCards.forEach((card) => {
-
-            const productCategory =
-                card.dataset.category;
-
-            if (
-                selectedCategory === "all" ||
-                selectedCategory === productCategory
-            ) {
-
-                card.classList.remove("hidden");
-
-                setTimeout(() => {
-                    card.classList.add("in-view");
-                }, 50);
-
-            } else {
-
-                card.classList.add("hidden");
-
-            }
-
-        });
-
+  button.addEventListener("click", () => {
+    filterButtons.forEach((btn) => {
+      btn.classList.remove("active");
     });
 
-});
+    button.classList.add("active");
 
+    const selectedCategory = button.dataset.filter;
+
+    productCards.forEach((card) => {
+      const productCategory = card.dataset.category;
+
+      if (selectedCategory === "all" || selectedCategory === productCategory) {
+        card.classList.remove("hidden");
+
+        setTimeout(() => {
+          card.classList.add("in-view");
+        }, 50);
+      } else {
+        card.classList.add("hidden");
+      }
+    });
+  });
+});
 
 /* ================= SCROLL REVEAL ================= */
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
 
-    const revealObserver =
-        new IntersectionObserver(
-            (entries, observer) => {
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+    },
+  );
 
-                entries.forEach((entry) => {
-
-                    if (entry.isIntersecting) {
-
-                        entry.target.classList.add(
-                            "in-view"
-                        );
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-    revealElements.forEach((element) => {
-        revealObserver.observe(element);
-    });
-
+  revealElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
 } else {
-
-    revealElements.forEach((element) => {
-        element.classList.add("in-view");
-    });
-
+  revealElements.forEach((element) => {
+    element.classList.add("in-view");
+  });
 }
-
 
 /* ================= NEWSLETTER ================= */
 
-const newsletterForm =
-    document.getElementById("newsletterForm");
+const newsletterForm = document.getElementById("newsletterForm");
 
-const emailInput =
-    document.getElementById("email");
+const emailInput = document.getElementById("email");
 
-const formMessage =
-    document.getElementById("formMessage");
+const formMessage = document.getElementById("formMessage");
 
-if (
-    newsletterForm &&
-    emailInput &&
-    formMessage
-) {
+if (newsletterForm && emailInput && formMessage) {
+  newsletterForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-    newsletterForm.addEventListener(
-        "submit",
-        (event) => {
+    const email = emailInput.value.trim();
 
-            event.preventDefault();
+    if (!email) {
+      formMessage.textContent = "Please enter your email address.";
 
-            const email =
-                emailInput.value.trim();
+      return;
+    }
 
-            if (!email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-                formMessage.textContent =
-                    "Please enter your email address.";
+    if (!emailPattern.test(email)) {
+      formMessage.textContent = "Please enter a valid email address.";
 
-                return;
+      return;
+    }
 
-            }
+    formMessage.textContent = "You're on the list! Welcome to JomiBeautyCO ✨";
 
-            const emailPattern =
-                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-            if (!emailPattern.test(email)) {
-
-                formMessage.textContent =
-                    "Please enter a valid email address.";
-
-                return;
-
-            }
-
-            formMessage.textContent =
-                "You're on the list! Welcome to JomiBeautyCO ✨";
-
-            emailInput.value = "";
-
-        }
-    );
-
+    emailInput.value = "";
+  });
 }
-
 
 /* =========================================================
    SHOPPING CART
 ========================================================= */
 
-let cart = JSON.parse(
-    localStorage.getItem("jomiBeautyCart")
-) || [];
+let cart = JSON.parse(localStorage.getItem("jomiBeautyCart")) || [];
 
+const cartBtn = document.getElementById("cartBtn");
 
-const cartBtn =
-    document.getElementById("cartBtn");
+const cartCount = document.getElementById("cartCount");
 
-const cartCount =
-    document.getElementById("cartCount");
-
-const addToCartButtons =
-    document.querySelectorAll(".add-to-cart");
-
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
 
 /* ================= UPDATE CART COUNT ================= */
 
 function updateCartCount() {
+  if (!cartCount) return;
 
-    if (!cartCount) return;
+  const totalItems = cart.reduce((total, item) => {
+    return total + item.quantity;
+  }, 0);
 
-    const totalItems =
-        cart.reduce((total, item) => {
-
-            return total + item.quantity;
-
-        }, 0);
-
-    cartCount.textContent = totalItems;
-
+  cartCount.textContent = totalItems;
 }
-
 
 /* ================= SAVE CART ================= */
 
 function saveCart() {
+  localStorage.setItem("jomiBeautyCart", JSON.stringify(cart));
 
-    localStorage.setItem(
-        "jomiBeautyCart",
-        JSON.stringify(cart)
-    );
-
-    updateCartCount();
-
+  updateCartCount();
 }
-
 
 /* ================= ADD PRODUCT TO CART ================= */
 
 addToCartButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const productName = button.dataset.name;
 
-    button.addEventListener("click", () => {
+    const productPrice = Number(button.dataset.price);
 
-        const productName =
-            button.dataset.name;
+    if (!productName || !productPrice) {
+      return;
+    }
 
-        const productPrice =
-            Number(button.dataset.price);
+    const existingProduct = cart.find((item) => item.name === productName);
 
-        if (!productName || !productPrice) {
-            return;
-        }
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({
+        name: productName,
+        price: productPrice,
+        quantity: 1,
+      });
+    }
 
-        const existingProduct =
-            cart.find(
-                (item) =>
-                    item.name === productName
-            );
+    saveCart();
 
-        if (existingProduct) {
+    const originalText = button.textContent.trim();
 
-            existingProduct.quantity += 1;
+    button.textContent = "Added ✓";
 
-        } else {
+    button.classList.add("added");
 
-            cart.push({
-                name: productName,
-                price: productPrice,
-                quantity: 1
-            });
+    setTimeout(() => {
+      button.textContent = originalText;
 
-        }
-
-        saveCart();
-
-        const originalText =
-            button.textContent.trim();
-
-        button.textContent = "Added ✓";
-
-        button.classList.add("added");
-
-        setTimeout(() => {
-
-            button.textContent = originalText;
-
-            button.classList.remove("added");
-
-        }, 1500);
-
-    });
-
+      button.classList.remove("added");
+    }, 1500);
+  });
 });
-
 
 /* ================= OPEN CART ================= */
 
 if (cartBtn) {
-
-    cartBtn.addEventListener("click", () => {
-        openCart();
-    });
-
+  cartBtn.addEventListener("click", () => {
+    openCart();
+  });
 }
-
 
 /* ================= OPEN CART FUNCTION ================= */
 
 function openCart() {
+  let cartPanel = document.getElementById("cartPanel");
 
-    let cartPanel =
-        document.getElementById("cartPanel");
+  if (!cartPanel) {
+    cartPanel = document.createElement("div");
 
-    if (!cartPanel) {
+    cartPanel.id = "cartPanel";
 
-        cartPanel =
-            document.createElement("div");
+    document.body.appendChild(cartPanel);
+  }
 
-        cartPanel.id = "cartPanel";
+  renderCart();
 
-        document.body.appendChild(cartPanel);
-
-    }
-
-    renderCart();
-
-    cartPanel.classList.add("active");
-
+  cartPanel.classList.add("active");
 }
-
 
 /* ================= CLOSE CART ================= */
 
 function closeCart() {
+  const cartPanel = document.getElementById("cartPanel");
 
-    const cartPanel =
-        document.getElementById("cartPanel");
-
-    if (cartPanel) {
-
-        cartPanel.classList.remove("active");
-
-    }
-
+  if (cartPanel) {
+    cartPanel.classList.remove("active");
+  }
 }
-
 
 /* ================= DISPLAY CART ================= */
 
 function renderCart() {
+  const cartPanel = document.getElementById("cartPanel");
 
-    const cartPanel =
-        document.getElementById("cartPanel");
+  if (!cartPanel) return;
 
-    if (!cartPanel) return;
+  /* EMPTY CART */
 
-
-    /* EMPTY CART */
-
-    if (cart.length === 0) {
-
-        cartPanel.innerHTML = `
+  if (cart.length === 0) {
+    cartPanel.innerHTML = `
 
             <div class="cart-header">
 
@@ -486,27 +329,21 @@ function renderCart() {
 
         `;
 
-        return;
+    return;
+  }
 
-    }
+  /* CART ITEMS */
 
+  let cartItemsHTML = "";
 
-    /* CART ITEMS */
+  let total = 0;
 
-    let cartItemsHTML = "";
+  cart.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity;
 
-    let total = 0;
+    total += itemTotal;
 
-
-    cart.forEach((item, index) => {
-
-        const itemTotal =
-            item.price * item.quantity;
-
-        total += itemTotal;
-
-
-        cartItemsHTML += `
+    cartItemsHTML += `
 
             <div class="cart-item">
 
@@ -563,13 +400,11 @@ function renderCart() {
             </div>
 
         `;
+  });
 
-    });
+  /* CART PANEL */
 
-
-    /* CART PANEL */
-
-    cartPanel.innerHTML = `
+  cartPanel.innerHTML = `
 
         <div class="cart-header">
 
@@ -635,150 +470,93 @@ function renderCart() {
         </div>
 
     `;
-
 }
-
 
 /* ================= CHANGE QUANTITY ================= */
 
 function changeQuantity(index, change) {
+  if (!cart[index]) return;
 
-    if (!cart[index]) return;
+  cart[index].quantity += change;
 
-    cart[index].quantity += change;
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
 
+  saveCart();
 
-    if (cart[index].quantity <= 0) {
-
-        cart.splice(index, 1);
-
-    }
-
-
-    saveCart();
-
-    renderCart();
-
+  renderCart();
 }
-
 
 /* ================= REMOVE PRODUCT ================= */
 
 function removeFromCart(index) {
+  if (!cart[index]) return;
 
-    if (!cart[index]) return;
+  cart.splice(index, 1);
 
-    cart.splice(index, 1);
+  saveCart();
 
-    saveCart();
-
-    renderCart();
-
+  renderCart();
 }
-
 
 /* ================= WHATSAPP CHECKOUT ================= */
 
 function checkoutWhatsApp() {
+  if (cart.length === 0) return;
 
-    if (cart.length === 0) return;
+  let message = "Hello JomiBeautyCO,\n\n";
 
+  message += "I would like to place an order:\n\n";
 
-    let message =
-        "Hello JomiBeautyCO,\n\n";
+  let total = 0;
 
-    message +=
-        "I would like to place an order:\n\n";
+  cart.forEach((item, index) => {
+    const itemTotal = item.price * item.quantity;
 
+    total += itemTotal;
 
-    let total = 0;
+    message += `${index + 1}. ${item.name}`;
 
+    message += ` x${item.quantity}`;
 
-    cart.forEach((item, index) => {
+    message += ` - ₦${itemTotal.toLocaleString()}\n`;
+  });
 
-        const itemTotal =
-            item.price * item.quantity;
+  message += `\nTotal: ₦${total.toLocaleString()}`;
 
-        total += itemTotal;
+  message += "\n\nThank you!";
 
+  const whatsappNumber = "2348025264779";
 
-        message +=
-            `${index + 1}. ${item.name}`;
+  const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
-        message +=
-            ` x${item.quantity}`;
-
-        message +=
-            ` - ₦${itemTotal.toLocaleString()}\n`;
-
-    });
-
-
-    message +=
-        `\nTotal: ₦${total.toLocaleString()}`;
-
-    message +=
-        "\n\nThank you!";
-
-
-    const whatsappNumber =
-        "2348025264779";
-
-
-    const whatsappURL =
-        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
-
-    window.open(
-        whatsappURL,
-        "_blank"
-    );
-
+  window.open(whatsappURL, "_blank");
 }
-
 
 /* ================= ESCAPE KEY ================= */
 
 document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && navMenu && navMenu.classList.contains("open")) {
+    navMenu.classList.remove("open");
 
-    if (
-        event.key === "Escape" &&
-        navMenu &&
-        navMenu.classList.contains("open")
-    ) {
+    if (menuToggle) {
+      menuToggle.classList.remove("active");
 
-        navMenu.classList.remove("open");
-
-        if (menuToggle) {
-            menuToggle.classList.remove("active");
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-        }
-
-        document.body.classList.remove(
-            "menu-open"
-        );
-
+      menuToggle.setAttribute("aria-expanded", "false");
     }
 
+    document.body.classList.remove("menu-open");
+  }
 });
-
 
 /* ================= CURRENT YEAR ================= */
 
-const yearElement =
-    document.querySelector("[data-year]");
+const yearElement = document.querySelector("[data-year]");
 
 if (yearElement) {
-
-    yearElement.textContent =
-        new Date().getFullYear();
-
+  yearElement.textContent = new Date().getFullYear();
 }
-
 
 /* ================= INITIAL CART COUNT ================= */
 
